@@ -16,7 +16,7 @@ function readDir(dirName) {
 function readFromPackageJson() {
     var packageJson;
     try {
-        packageJson = require(path.join(process.cwd(), './package.json'));
+        packageJson = require(path.join(process.cwd(), './.bower.json'));
     } catch (e){
         return [];
     }
@@ -45,7 +45,7 @@ function containsPattern(arr, val) {
 function getModuleName(request, modulesDir) {
     var req = request;
     // in case absolute, strip all parts before */modulesDir/
-    req = req.replace(/^.*?\/node_modules\//, '');
+    req = req.replace(/^.*?\/bower_components\//, '');
     // return the module name
     return req.split('/')[0];
 }
@@ -54,8 +54,8 @@ module.exports = function nodeExternals(options) {
     options = options || {};
     var whitelist = [].concat(options.whitelist || []);
     var binaryDirs = [].concat(options.binaryDirs || ['.bin']);
-    var importType = options.importType || 'commonjs';
-    var modulesDir = options.modulesDir || 'node_modules';
+    var importType = options.importType || 'umd';
+    var modulesDir = options.modulesDir || 'bower_components';
     var modulesFromFile = !!options.modulesFromFile;
 
     // helper function

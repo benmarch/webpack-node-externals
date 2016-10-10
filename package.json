@@ -1,11 +1,11 @@
 {
-  "name": "webpack-node-externals",
+  "name": "webpack-bower-externals",
   "version": "1.5.4",
-  "description": "Easily exclude node_modules in Webpack bundle",
+  "description": "Easily exclude bower_components in Webpack bundle",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/liady/webpack-node-externals.git"
+    "url": "https://github.com/benmarch/webpack-bower-externals.git"
   },
   "dependencies": {},
   "devDependencies": {
@@ -27,18 +27,22 @@
     "bundle",
     "externals"
   ],
-  "author": {
+  "authors": [{
     "name": "Liad Yosef",
     "url": "https://github.com/liady"
   },
+  {
+    "name": "Ben March",
+    "url": "https://github.com/benmarch"
+  }],
   "files": [
     "LICENSE",
     "README.md",
     "index.js"
   ],
   "bugs": {
-    "url": "https://github.com/liady/webpack-node-externals/issues"
+    "url": "https://github.com/benmarch/webpack-bower-externals/issues"
   },
-  "homepage": "https://github.com/liady/webpack-node-externals",
+  "homepage": "https://github.com/benmarch/webpack-bower-externals",
   "license": "MIT"
 }
